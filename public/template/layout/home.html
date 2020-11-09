@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list Toggling</title>
+    <link href="/css/home.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1> {{title}} </h1>
+    <div class="container">
+        <div class="relative">
+            <div class="top-nav-bar selectSection"> <!-- === selectSection-->
+                <button type="button" data-number="1" class="active">Button 1</button>
+                <button type="button" data-number="2">Button 2</button>
+                <button type="button" data-number="3">Button 3</button>
+                <button type="button" data-number="4">Button 4</button>
+            </div>
+            <div class="left-menu-bar">
+    
+            </div>
+            <div class="main contentSection">
+                <div class="content align" data-number="1">
+                    <table id="table">
+                    Content of button 1
+                    </table>
+                    
+                    {% from 'macro/button.html' import button1 %}
+                    {{ button1('')}}
+
+                </div>
+                <div class="content align" data-number="2" style="display:none">
+                    Content of button 2
+                    {% from 'macro/button.html' import button2 %}
+                    {{ button2('')}}
+                </div>
+                <div class="content align" data-number="3" style="display:none">
+                    Content of button 3
+
+                    {% from 'macro/button.html' import button3 %}
+                    {{ button3('')}}
+                </div>
+
+                <div class="content align" data-number="4" style="display:none">
+                    Content of button 4
+                </div>
+
+                
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+<script type="module" src="/js/main.js"></script>
+
+
+</html>

@@ -1,0 +1,74 @@
+{% macro button1() %}
+
+<h2>근무편성 기간 설정창</h1>
+<form name="기간설정창" action=""  method="post">
+    시작일 : <input type="date" name="periodStart" id='periodStart' value='2020-01-01'><br>
+    종료일 : <input type="date" name="periodEnd" id='periodEnd' value='2020-03-31'><br>
+    <input type="button" id = 'setPeriod' value="기간 정하기">
+</form>   
+
+{% endmacro %} 
+
+{% macro button2() %}
+
+<table border="1px solid black">
+    <thead>
+        <tr>
+            <th colspan='8'>근무 설정</th>
+        </tr>
+        <tr>
+            <th>근무명</th>
+            <th>첫번째 근무시작 시간</th>
+            <th>마지막 근무종료 시간 </th>
+            <th>하루 타임 수</th>
+            <th>타임당 투입인원수</th>
+            <th>추가</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input type = 'name' maxlength = '8' size = '8' id='operationName' placeholder ='근무명' style='text-align:center'></td>
+            <td><input type = 'time' maxlength = '5' size = '5' id='operationStart' value ='22:00' style='text-align:center'></td>
+            <td><input type = 'time' maxlength = '5' size = '5' id='operationEnd' value ='06:30' style='text-align:center'></td>
+            <td><input type = 'number' style = 'text-align: center; width :100px;' maxlength = '2' size = '3' id='operationShift' placeholder ='몇교대?' style='text-align:center'></td>
+            <td><input type = 'number' style = 'text-align: center; width :150px;'maxlength = '2' size = '3' id='operationPeople' placeholder ='몇명투입?' style='text-align:center'></td>
+            <td><input type="button" id = 'setOperation' value="추가"></td>
+            
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr></tr>
+    </tfoot>
+</table>
+
+{% endmacro %} 
+
+{% macro button3() %}
+
+<table border = '1px soild black' id = "operation_List_paper"> 
+    <thead>
+        <tr>
+        <th colspan = '8'>
+            근무 목록
+        </th>
+        </tr>
+        <tr>
+        <th>번호</th>
+        <th>근무명</th>
+        <th>시작 시간</th>
+        <th>종료 시간</th>
+        <th>일일 투입 인원</th>
+        <th>동작</th>
+        </tr>
+    </thead>
+    <tbody id = "operation_List"> 
+
+    </tbody>
+</table>
+{% endmacro %} 
+
+{% macro button4() %}
+
+
+
+{% endmacro %} 
